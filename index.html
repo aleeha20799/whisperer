@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whisperer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts-container" id="hearts-container"></div>
+
+  <div class="wrapper">
+    <h1>Whisperer 💫</h1>
+    <div class="card">
+      <textarea id="text-input" placeholder="Type your whisper..."></textarea>
+
+      <input type="file" id="image-upload" accept="image/*" hidden />
+      <button id="upload-btn">📷 Upload Image</button>
+      <button id="generate-btn">✨ Generate Whisper</button>
+      <button id="download-btn" style="display:none;">⬇️ Download Image</button>
+
+      <div class="controls">
+        <label>
+          Font Size
+          <input type="range" id="font-size" min="20" max="100" value="40" />
+        </label>
+        <label>
+          Text Color
+          <input type="color" id="text-color" value="#ffffff" />
+        </label>
+        <label>
+          Outline Text
+          <input type="checkbox" id="outline" checked />
+        </label>
+        <label>
+          Outline Color
+          <input type="color" id="outline-color" value="#000000" />
+        </label>
+      </div>
+
+      <div id="canvas-wrapper" style="display:none;">
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <p id="thank-you">💖 Thanks for using Whisperer!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

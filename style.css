@@ -1,0 +1,121 @@
+/* Reset & globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #000;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Layout */
+.wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  color: #ccc;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 80px;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  margin-bottom: 10px;
+  background: #000;
+  color: #fff;
+  resize: none;
+}
+
+/* Buttons */
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #666;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #888;
+}
+
+/* Controls */
+.controls {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ddd;
+  text-align: left;
+}
+.controls label {
+  display: block;
+  margin: 10px 0;
+}
+input[type="range"],
+input[type="color"] {
+  margin-left: 10px;
+}
+
+/* Canvas & thank-you */
+#canvas {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px dashed #555;
+}
+#thank-you {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #bbb;
+  display: none;
+}
+
+/* Falling hearts background */
+.hearts-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.heart {
+  position: absolute;
+  color: #fff;
+  font-size: 24px;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
